@@ -1,0 +1,152 @@
+body {
+  font-family: Halant, serif !important;
+  background: linear-gradient(
+      rgba(253, 238, 226, 1) 0%,
+      rgba(152, 133, 128, 0) 30%
+    ),
+    url(/pictures/background.png);
+  background-size: cover;
+}
+
+@font-face {
+  font-family: Christopher;
+  src: url(/fonts/Christopher.ttf);
+}
+
+:root {
+  interpolate-size: allow-keywords;
+  --color-blue: #70abff;
+  --color-blue-dark: #303a46;
+  --text-black: #747474;
+  --text-white: #eee2da;
+  --title-text-white: #d3cdca;
+  --title-text-black: #1c1f23;
+}
+
+.container,
+section {
+  background-color: transparent !important;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 40px 0;
+  padding: 10px 0;
+
+  .wrapper {
+    display: flex;
+    gap: 40px;
+  }
+}
+
+.nav-link {
+  color: var(--text-black) !important;
+  font-size: 25px !important;
+
+  &:hover {
+    color: var(--color-blue) !important;
+  }
+}
+
+.logo {
+  font-family: Christopher, serif;
+  font-size: 30px;
+  color: var(--color-blue);
+}
+
+#hero {
+  margin: 0 0 250px;
+  h1 {
+    position: relative;
+    font-family: "Cinzel Decorative", serif;
+    text-align: center;
+    font-size: 470px;
+    text-shadow: -1px -4px 0 rgba(6, 20, 82, 0.5);
+    color: var(--color-blue);
+    margin: 90px 0 0;
+
+    span {
+      position: relative;
+      color: var(--title-text-black);
+      font-size: 674px;
+      text-shadow: none;
+
+      &::after {
+        content: " ";
+        position: absolute;
+        top: 180px;
+        left: 0;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 7 / 6;
+        background-image: url(/pictures/title-backround.png);
+        z-index: -1;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+
+  .description {
+    color: var(--color-blue-dark);
+    font-size: 26px;
+    text-align: center;
+    max-width: 60ch;
+    margin: 0 auto 40px;
+  }
+
+  .explore-link {
+    display: block;
+    color: var(--color-blue-dark) !important;
+    font-size: 26px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+
+    div {
+      line-height: 1;
+    }
+  }
+}
+
+#about {
+  padding-top: 70px;
+  color: var(--text-white);
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-boxes {
+    position: relative;
+    margin-left: 300px;
+
+    &::before {
+      content: "About me";
+      display: inline-block;
+      position: absolute;
+      bottom: 30%;
+      right: 70%;
+      transform: rotate(-90deg);
+      font-size: 221px;
+      text-wrap: nowrap;
+    }
+  }
+
+  .about-box {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+    max-width: 65ch;
+    font-size: 26px;
+    padding: 40px;
+    border-radius: 40px;
+    border: 2px solid var(--text-white);
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+}
