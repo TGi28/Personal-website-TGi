@@ -64,7 +64,7 @@ header {
     font-size: 470px;
     text-shadow: -1px -4px 0 rgba(6, 20, 82, 0.5);
     color: var(--color-blue);
-    margin: 90px 0 0;
+    margin: 90px 80px 0 0;
 
     span {
       position: relative;
@@ -93,7 +93,7 @@ header {
     font-size: 26px;
     text-align: center;
     max-width: 60ch;
-    margin: 0 auto 40px;
+    margin: -40px auto 40px;
   }
 
   .explore-link {
@@ -112,6 +112,7 @@ header {
 
 #about {
   padding-top: 70px;
+  margin-bottom: 200px;
   color: var(--text-white);
   .container {
     display: flex;
@@ -148,5 +149,66 @@ header {
     &:not(:last-child) {
       margin-bottom: 40px;
     }
+  }
+}
+
+#services {
+  color: var(--text-white);
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 68px;
+    margin: 0 0 20px;
+  }
+
+  .service-arrows {
+    margin-bottom: 40px;
+  }
+
+  .service-icons {
+    margin-bottom: 20px;
+  }
+
+  .services {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    margin-bottom: 80px;
+  }
+
+  .service-title {
+    font-size: 32px;
+    text-align: center;
+    max-width: 22ch;
+    margin: 0 0 40px;
+  }
+
+  .service-description {
+    font-size: 18px;
+    max-width: 35ch;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+#portfolio {
+  background: linear-gradient(#8f9bab 0%, #fcede1 100%);
+
+  .top-image {
+    width: 100%;
+    margin-top: -30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .examples {
+    background: url(/pictures/portfolio-background.png);
+    background-size: cover;
   }
 }
