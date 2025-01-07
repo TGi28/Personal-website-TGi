@@ -2,7 +2,7 @@ body {
   font-family: Halant, serif !important;
   background: linear-gradient(
       rgba(253, 238, 226, 1) 0%,
-      rgba(152, 133, 128, 0) 30%
+      rgba(152, 133, 128, 0) 10%
     ),
     url(/pictures/background.png);
   background-size: cover;
@@ -62,7 +62,7 @@ header {
     font-family: "Cinzel Decorative", serif;
     text-align: center;
     font-size: 470px;
-    text-shadow: -1px -4px 0 rgba(6, 20, 82, 0.5);
+    text-shadow: -1px -4px 0 rgba(90, 120, 254, 0.5);
     color: var(--color-blue);
     margin: 90px 80px 0 0;
 
@@ -111,7 +111,7 @@ header {
 }
 
 #about {
-  padding-top: 70px;
+  padding-top: 170px;
   margin-bottom: 200px;
   color: var(--text-white);
   .container {
@@ -122,17 +122,21 @@ header {
   .about-boxes {
     position: relative;
     margin-left: 300px;
-
-    &::before {
-      content: "About me";
-      display: inline-block;
-      position: absolute;
-      bottom: 30%;
-      right: 70%;
-      transform: rotate(-90deg);
-      font-size: 221px;
-      text-wrap: nowrap;
-    }
+  }
+  .about-title {
+    position: absolute;
+    background: linear-gradient(
+      270deg,
+      #fff9f4 0%,
+      rgba(153, 153, 153, 0.62) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    bottom: 250px;
+    left: -600px;
+    transform: rotate(-90deg);
+    font-size: 221px;
+    text-wrap: nowrap;
   }
 
   .about-box {
@@ -167,19 +171,22 @@ header {
     margin: 0 0 20px;
   }
 
-  .service-arrows {
+  .service-icon {
     margin-bottom: 40px;
-  }
-
-  .service-icons {
-    margin-bottom: 20px;
   }
 
   .services {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 120px;
     margin-bottom: 80px;
+  }
+
+  .service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .service-title {
@@ -198,7 +205,10 @@ header {
 }
 
 #portfolio {
-  background: linear-gradient(#8f9bab 0%, #fcede1 100%);
+  background-image: url(/pictures/portfolio-background.png),
+    linear-gradient(#8f9bab 0%, #fcede1 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
 
   .top-image {
     width: 100%;
@@ -206,9 +216,96 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
   }
+}
 
-  .examples {
-    background: url(/pictures/portfolio-background.png);
-    background-size: cover;
+#contact {
+  background-color: #fcede1 !important;
+  box-shadow: 0px 48px 127px -4px #1d2126;
+
+  .title {
+    color: var(--text-black);
+    font-size: 197px;
+    text-align: center;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 300px;
+  }
+
+  .contacts-title {
+    font-weight: 500;
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: 1px solid var(--color-blue-dark);
+    border-radius: 20px;
+    padding: 20px 30px;
+  }
+
+  .contact,
+  .contacts-title {
+    color: var(--color-blue-dark);
+    font-size: 25px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  textarea {
+    resize: none;
+  }
+}
+
+footer {
+  padding: 80px 0;
+  background: linear-gradient(
+      rgba(0, 14, 23, 0.74) 0%,
+      rgba(0, 27, 31, 0.74) 100%
+    ),
+    url(/pictures/footer-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    text-align: center;
+    color: var(--text-white);
+    margin-bottom: 30px;
+  }
+
+  .page-links {
+    display: grid;
+    justify-content: space-between;
+    column-gap: 400px;
+    row-gap: 10px;
+    grid-template-rows: repeat(3, 1fr);
+    grid-auto-flow: column;
+    border: 1px solid var(--text-white);
+    border-radius: 20px;
+    padding: 20px 40px;
+    margin: 0 0 60px;
+  }
+
+  .nav-link {
+    color: var(--text-white) !important;
+  }
+
+  .links {
+    display: flex;
+    gap: 15px;
   }
 }
