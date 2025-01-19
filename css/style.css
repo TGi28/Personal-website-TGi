@@ -1,8 +1,11 @@
 body {
   font-family: Halant, serif !important;
-  background: url(/pictures/background.png);
+  background: linear-gradient(
+      rgba(253, 238, 226, 1) 0%,
+      rgba(152, 133, 128, 0) 10%
+    ),
+    url(/pictures/background.png);
   background-size: cover;
-  background-repeat: repeat;
 }
 
 @font-face {
@@ -154,6 +157,7 @@ header {
 }
 
 #services {
+  position: relative;
   padding-bottom: 300px;
   color: var(--text-white);
 
@@ -200,6 +204,13 @@ header {
     text-align: center;
     margin: 0 auto;
   }
+  .top-image {
+    position: absolute;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    bottom: -520px;
+  }
 }
 
 #portfolio {
@@ -207,6 +218,7 @@ header {
     linear-gradient(#8f9bab 0%, #fcede1 100%);
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 600px;
 
   .description {
     margin: 0 auto;
@@ -238,13 +250,6 @@ header {
       color: var(--text-white);
       border: 1px solid var(--text-white);
     }
-  }
-
-  .top-image {
-    width: 100%;
-    margin-top: -30px;
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   .example {
